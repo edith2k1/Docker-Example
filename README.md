@@ -6,7 +6,7 @@
 
   - [Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:](#install-docker-ubuntu)[^1]
 
-  - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians:](#docker-netwoking)
+  - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians:](#docker-netwoking)[^2]
 
   - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker storage (volumes)](#docker-volume)
 
@@ -54,19 +54,68 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
 
 - Liệt kê các network đang có:
     
-        docker network ls
+      docker network ls
+
+- Kiểm tra thông tin của 1 network:
+
+      docker network inspect `network-name`
+
+- Port mapping:
+
+      docker run -p `Host-Port`:`Client-Port` ...
+    
+    > Ví dụ: `docker run --name nginx -p 80:80 nginx`
+    >
+    > Cổng 80 của máy host sẽ ánh xạ vào cổng 80 của container nginx. Vậy khi chúng ta truy cập vào địa chỉ ip máy host cổng 80 tức là đang truy cập vào container nginx cổng 80
 
 - Tạo một network mới:
 
-        docker network create -d `network-driver` `name-network`
+      docker network create -d `network-driver` `network-name`
 
     > Trong đó:
     >
-    > network-driver: bridge, host, overlay, ipvlan, macvlan, none
+    > `network-driver`: bridge, host, overlay, ipvlan, macvlan, none
     > 
-    > name-network: tự đặt
+    > `network-name`: tự đặt
+
+- Xóa một network:
+
+      docker network rm `network-name`
+
+- Chỉ định container kết nối vào network khi khởi tạo:
+      
+      docker run --network `network-name` ...
+
+    > Ví dụ: docker run --name nginx --network mynetwork nginx
+    > 
+    > container nginx thay vì mặc định sẽ kết nối với network `bridge` thì nó sẽ được chỉ định kết nối với network `mynetwork` 
+
+- Kết nối container vào 1 network thứ 2:
+
+      docker network connect `network-name` `container-name`
+
+    > Ví dụ: 
+    >
+    > docker run --name nginx nginx
+    >
+    > => container nginx mặc định kết nối vào network `bridge`
+    > 
+    > docker network connect mynetwork nginx
+    >
+    > => container nginx được kết nối vào network `mynetwork`
+    >
+    > => Lúc này, container nginx kết nối vào 2 network: `bridge` và `mynetwork`
+
+- Ngắt kết nối container với network:
+
+      docker network disconnect `network-name` `container-name`
+
+***
+
+
 
 [^1]: https://docs.docker.com/engine/install/ubuntu/
+[^2]: https://www.youtube.com/watch?v=k1SwXOxvMdE&t=1648s
 
 
 
