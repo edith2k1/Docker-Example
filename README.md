@@ -4,7 +4,7 @@
 
 - ### Lý thuyết
 
-  - [Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:](#install-docker-ubuntu)
+  - [Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:](#install-docker-ubuntu)[^1]
 
   - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking](#docker-netwoking)
 
@@ -42,6 +42,8 @@
     sudo apt-get update
 >
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose
+
+[^1]: https://docs.docker.com/engine/install/ubuntu/
 
 
 
