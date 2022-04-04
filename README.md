@@ -86,7 +86,7 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
       
       docker run --network `network-name` ...
 
-    > Ví dụ: docker run --name nginx --network mynetwork nginx
+    > Ví dụ: `docker run --name nginx --network mynetwork nginx`
     > 
     > container nginx thay vì mặc định sẽ kết nối với network `bridge` thì nó sẽ được chỉ định kết nối với network `mynetwork` 
 
@@ -96,11 +96,11 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
 
     > Ví dụ: 
     >
-    > docker run --name nginx nginx
+    > `docker run --name nginx nginx`
     >
     > => container nginx mặc định kết nối vào network `bridge`
     > 
-    > docker network connect mynetwork nginx
+    > `docker network connect mynetwork nginx`
     >
     > => container nginx được kết nối vào network `mynetwork`
     >
