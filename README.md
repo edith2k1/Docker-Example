@@ -52,11 +52,11 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
 
 ### 2. Một số lệnh cơ bản
 
-- Liệt kê các network đang có:
+- Liệt kê network:
     
       docker network ls
 
-- Kiểm tra thông tin của 1 network:
+- Kiểm tra thông tin của network:
 
       docker network inspect `network-name`
 
@@ -68,7 +68,7 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
     >
     > Cổng 80 của máy host sẽ ánh xạ vào cổng 80 của container nginx. Vậy khi chúng ta truy cập vào địa chỉ ip máy host cổng 80 tức là đang truy cập vào container nginx cổng 80
 
-- Tạo một network mới:
+- Tạo network mới:
 
       docker network create -d `network-driver` `network-name`
 
@@ -90,7 +90,7 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
     > 
     > container nginx thay vì mặc định sẽ kết nối với network `bridge` thì nó sẽ được chỉ định kết nối với network `mynetwork` 
 
-- Kết nối container vào 1 network thứ 2:
+- Kết nối container vào 1 network:
 
       docker network connect `network-name` `container-name`
 
@@ -115,7 +115,7 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
 
 
 [^1]: https://docs.docker.com/engine/install/ubuntu/
-[^2]: https://www.youtube.com/watch?v=k1SwXOxvMdE&t=1648s
+[^2]: https://docs.docker.com/engine/reference/commandline/network/
 
 
 
