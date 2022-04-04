@@ -8,7 +8,7 @@
 
   - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians:](#docker-netwoking)[^2]
 
-  - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker storage (volumes)](#docker-volume)
+  - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker storage (volumes) :file_folder: ](#docker-volume)
 
   - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Dockerfile](#Dockerfile)
 
@@ -112,6 +112,7 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
 
 ***
 
+## Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker storage (volumes) :file_folder: <a id="docker-volume"></a>
 
 
 [^1]: https://docs.docker.com/engine/install/ubuntu/
