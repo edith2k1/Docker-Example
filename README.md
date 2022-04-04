@@ -6,7 +6,7 @@
 
   - [Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:](#install-docker-ubuntu)[^1]
 
-  - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking](#docker-netwoking)
+  - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians:](#docker-netwoking)
 
   - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker storage (volumes)](#docker-volume)
 
@@ -18,7 +18,7 @@
 
   - [Cài đặt WORDPRESS từ images và tạo container từ images đã cài đặt (Từ Docker hub và Dockerfile)](#wordpress)
 
-  - [Cài đặt MySQL từ images và tạo container từ images đã cài đặt (Từ Docker hub và Dockerfile)](#mysql)
+  - [Cài đặt MYSQL từ images và tạo container từ images đã cài đặt (Từ Docker hub và Dockerfile)](#mysql)
 
   - [Cài đặt PHPMYADMIN từ images và tạo container từ images đã cài đặt (Từ Docker hub và Dockerfile)](#phpmyadmin)
 
@@ -27,7 +27,6 @@
   - [Cài đặt Portainer để quản lý Docker](#portainer)
 
 *** 
-
 
 ## Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin: <a id="install-docker-ubuntu"></a>
 
@@ -42,6 +41,10 @@
     sudo apt-get update
 >
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose
+
+*** 
+
+## Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians: <a id="docker-netwoking"></a>
 
 [^1]: https://docs.docker.com/engine/install/ubuntu/
 
