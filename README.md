@@ -46,6 +46,26 @@
 
 ## Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians: <a id="docker-netwoking"></a>
 
+### 1. Khái niệm
+
+Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container với nhau, kết nối giữa container với bên ngoài, cũng như kết nối giữa các cụm (swarm) docker containers.
+
+### 2. Một số lệnh cơ bản
+
+- Liệt kê các network đang có:
+    
+        docker network ls
+
+- Tạo một network mới:
+
+        docker network create -d `network-driver` `name-network`
+
+    > Trong đó:
+    >
+    > network-driver: bridge, host, overlay, ipvlan, macvlan, none
+    > 
+    > name-network: tự đặt
+
 [^1]: https://docs.docker.com/engine/install/ubuntu/
 
 
