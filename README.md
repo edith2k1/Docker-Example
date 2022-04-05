@@ -197,6 +197,17 @@ Docker storage sẽ đảm nhiệm nhiệm vụ quản lý data của các conta
   > 
   > => volume DISK - folder `/home/fit` máy host - folder `/home/B6` container B6 => **đồng bộ**
 
+***
+
+## Tìm hiểu khái niệm và thực hiện 1 ví dụ về Dockerfile <a id="Dockerfile"></a>
+
+### 1. Khái niệm [^9]
+
+Dockerfile là một file dạng text không có extension, và tên bắt buộc phải là Dockerfile
+
+Dockerfile là một file kịch bản sử dụng để tạo mới một image
+
+### 2. Một số ví dụ cơ bản
 
 ***
 
@@ -208,6 +219,7 @@ Docker storage sẽ đảm nhiệm nhiệm vụ quản lý data của các conta
 [^6]: https://blog.cloud365.vn/container/tim-hieu-docker-phan-7/
 [^7]: https://viblo.asia/p/docker-co-ban-p2-storage-gAm5yVo8Kdb
 [^8]: https://www.youtube.com/watch?v=DSP2-ip38Zw&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=4
+[^9]: https://blog.cloud365.vn/container/tim-hieu-docker-phan-4/
 
 
 
