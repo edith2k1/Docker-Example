@@ -4,11 +4,11 @@
 
 - ### Lý thuyết
 
-  - [Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:](#install-docker-ubuntu)[^1]
+  - [Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:](#install-docker-ubuntu)
 
-  - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians:](#docker-netwoking)[^2][^3][^4][^5]
+  - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians:](#docker-netwoking)
 
-  - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker storage (volumes) :file_folder: ](#docker-volume)
+  - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker storage (volumes) :file_folder: ](#docker-volume)[^6][^7]
 
   - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Dockerfile](#Dockerfile)
 
@@ -28,7 +28,7 @@
 
 *** 
 
-## Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin: <a id="install-docker-ubuntu"></a>
+## Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin: <a id="install-docker-ubuntu"></a>[^1]
 
     sudo apt-get update
 >
@@ -46,11 +46,11 @@
 
 ## Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians: <a id="docker-netwoking"></a>
 
-### 1. Khái niệm
+### 1. Khái niệm[^2][^5]
 
 Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container với nhau, kết nối giữa container với bên ngoài, cũng như kết nối giữa các cụm (swarm) docker containers.
 
-### 2. Một số lệnh cơ bản
+### 2. Một số lệnh cơ bản[^3][^4]
 
 - Liệt kê network:
     
@@ -58,11 +58,11 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
 
 - Kiểm tra thông tin của network:
 
-      docker network inspect `network-name`
+      docker network inspect [network-name]
 
 - Port mapping:
 
-      docker run -p `Host-Port`:`Client-Port` ...
+      docker run -p [Host-Port]:[Client-Port] ...
     
     > Ví dụ: `docker run --name nginx -p 80:80 nginx`
     >
@@ -70,7 +70,7 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
 
 - Tạo network mới:
 
-      docker network create -d `network-driver` `network-name`
+      docker network create -d [network-driver] [network-name]
 
     > Trong đó:
     >
@@ -80,11 +80,11 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
 
 - Xóa một network:
 
-      docker network rm `network-name`
+      docker network rm [network-name]
 
 - Chỉ định container kết nối vào network khi khởi tạo:
       
-      docker run --network `network-name` ...
+      docker run --network [network-name] ...
 
     > Ví dụ: `docker run --name nginx --network mynetwork nginx`
     > 
@@ -92,7 +92,7 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
 
 - Kết nối container vào 1 network:
 
-      docker network connect `network-name` `container-name`
+      docker network connect `[network-name] [container-name]
 
     > Ví dụ: 
     >
@@ -108,18 +108,26 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
 
 - Ngắt kết nối container với network:
 
-      docker network disconnect `network-name` `container-name`
+      docker network disconnect [network-name] [container-name]
 
 ***
 
 ## Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker storage (volumes) :file_folder: <a id="docker-volume"></a>
 
+### 1. Khái niệm[^6][^7]
+
+### 2. Một số lệnh cơ bản
+
+***
 
 [^1]: https://docs.docker.com/engine/install/ubuntu/
-[^2]: https://docs.docker.com/network/
-[^3]: https://viblo.asia/p/docker-networking-nhung-khai-niem-va-cach-su-dung-co-ban-gGJ59P2JlX2
+[^2]: https://viblo.asia/p/docker-networking-nhung-khai-niem-va-cach-su-dung-co-ban-gGJ59P2JlX2
+[^3]: https://www.youtube.com/watch?v=k1SwXOxvMdE&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=5
 [^4]: https://docs.docker.com/engine/reference/commandline/network/
-[^5]: https://www.youtube.com/watch?v=k1SwXOxvMdE&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=5
+[^5]: https://docs.docker.com/network/
+[^6]: https://blog.cloud365.vn/container/tim-hieu-docker-phan-7/
+[^7]: https://viblo.asia/p/docker-co-ban-p2-storage-gAm5yVo8Kdb
+
 
 
 
