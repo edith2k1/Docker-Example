@@ -6,7 +6,7 @@
 
   - [Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:](#install-docker-ubuntu)[^1]
 
-  - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians:](#docker-netwoking)[^2]
+  - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians:](#docker-netwoking)[^2][^3]
 
   - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker storage (volumes) :file_folder: ](#docker-volume)
 
@@ -117,6 +117,7 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
 
 [^1]: https://docs.docker.com/engine/install/ubuntu/
 [^2]: https://docs.docker.com/engine/reference/commandline/network/
+[^3]: https://www.youtube.com/watch?v=k1SwXOxvMdE&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=5
 
 
 
