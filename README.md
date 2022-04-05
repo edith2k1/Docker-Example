@@ -134,7 +134,7 @@ Docker storage sẽ đảm nhiệm nhiệm vụ quản lý data của các conta
   >
   > Chúng ta đã chia sẻ dữ liệu thành công giữa folder `/home/fit` của máy host với folder `/home/data` của container B1. Tức là folder `/home/fit` và folder `/home/data` có dữ liệu y như nhau. Hơn thế nữa, dữ liệu trong folder `/home/data` và folder `/home/fit` sẽ được tự động đồng bộ với nhau. Cuối cùng, khi chúng ta xóa container B1 thì dữ liệu trong folder `/home/fit` sẽ không bị mất
 
-- Chia sẽ dữ liệu giữa các container:
+- Chia sẻ dữ liệu giữa các container:
 
       docker run --volumes-from [container-name] ...
 
@@ -166,23 +166,37 @@ Docker storage sẽ đảm nhiệm nhiệm vụ quản lý data của các conta
 
         docker run -v [volume-name]:[container-path] ...
 
+  - --mount flag:
+
+        docker run --mount src=[volume-name],dst=[container-path] ...
+
       > Ví dụ:
       >
       > `docker run -it --name B1 -v D1:/home/B1 busybox`
+      >
+      > Hoặc
+      >
+      > `docker run -it --name B1 --mount src=D1,dst=/home/B1 busybox`
       > 
       > Chúng ta đã gắn thành công volume D1 vào container B1. Volume D1 được ánh xạ vào folder `/home/B1`. Có nghĩa là, dữ liệu trong folder `/home/B1` sẽ được đồng bộ với volume D1. Khi chúng ta xóa container B1 thì dữ liệu trong volume D1 không bị mất
 
-  - -mount flag:
-
-        docker run --mount src=[volume-name],dst=[container-path] ...
-      
-      > Ví dụ: 
-      >
-      > `docker run -it --name B2 --mount src=D2,dst=/home/B2 busybox`
-      >
-      > Ý nghĩa tương tự như trên
 
 - Tạo volume ánh xạ đến thư mục máy host:
+
+      docker volume create --opt device=[host-path] --opt type=none --opt o=bind [volume-name]
+
+  > Ví dụ: 
+  >
+  > `docker volume create --opt device=/home/fit --opt type=none --opt o=bind DISK`
+  >
+  > Tạo thành công volume DISK ánh xạ đến folder `/home/fit` trên máy host.
+  >
+  > ` docker run -it --name B6 -v DISK:/home/B6 busybox`
+  >
+  > Gắn volume DISK vào container B6
+  > 
+  > => volume DISK - folder `/home/fit` máy host - folder `/home/B6` container B6 => **đồng bộ**
+
 
 ***
 
