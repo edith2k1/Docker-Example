@@ -8,7 +8,7 @@
 
   - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians:](#docker-netwoking)
 
-  - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker storage (volumes) :file_folder: ](#docker-volume)[^6][^7]
+  - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker storage (volumes) :file_folder: ](#docker-volume)
 
   - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Dockerfile](#Dockerfile)
 
@@ -28,7 +28,7 @@
 
 *** 
 
-## Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin: <a id="install-docker-ubuntu"></a>[^1]
+## Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:[^1] <a id="install-docker-ubuntu"></a>
 
     sudo apt-get update
 >
@@ -46,11 +46,11 @@
 
 ## Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians: <a id="docker-netwoking"></a>
 
-### 1. Khái niệm[^2][^5]
+### 1. Khái niệm [^2][^5]
 
 Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container với nhau, kết nối giữa container với bên ngoài, cũng như kết nối giữa các cụm (swarm) docker containers.
 
-### 2. Một số lệnh cơ bản[^3][^4]
+### 2. Một số lệnh cơ bản [^3][^4]
 
 - Liệt kê network:
     
@@ -114,7 +114,7 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
 
 ## Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker storage (volumes) :file_folder: <a id="docker-volume"></a>
 
-### 1. Khái niệm[^6][^7]
+### 1. Khái niệm [^6][^7]
 
 ### 2. Một số lệnh cơ bản
 
