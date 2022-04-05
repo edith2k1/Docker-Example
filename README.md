@@ -116,7 +116,15 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
 
 ### 1. Khái niệm [^6][^7]
 
-### 2. Một số lệnh cơ bản
+### 2. Một số lệnh cơ bản [^8]
+
+- Chia sẻ dữ liệu giữa máy host và container:
+
+      docker run -v [path-host]:[path-container] ....
+
+  > Ví dụ: `docker run -itd --name B1 -v /home/fit:/home/data busybox`
+  >
+  > Chúng ta đã chia sẻ dữ liệu thành công giữa folder `/home/fit` của máy host với folder `/home/data` của container B1. Tức là folder `/home/fit` và folder `/home/data` có dữ liệu y như nhau. Hơn thế nữa, nếu container B1 ghi dữ liệu vào folder `/home/data` thì folder `/home/fit` sẽ được tự động cập nhật theo. Khi chúng ta xóa container B1 thì dữ liệu trong folder `/home/fit` sẽ không bị mất
 
 ***
 
@@ -127,6 +135,7 @@ Docker network sẽ đảm nhiệm vụ kết nối mạng giữa các container
 [^5]: https://docs.docker.com/network/
 [^6]: https://blog.cloud365.vn/container/tim-hieu-docker-phan-7/
 [^7]: https://viblo.asia/p/docker-co-ban-p2-storage-gAm5yVo8Kdb
+[^8]: https://www.youtube.com/watch?v=DSP2-ip38Zw&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=4
 
 
 
