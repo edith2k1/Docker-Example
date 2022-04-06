@@ -96,7 +96,7 @@ Docker network sẽ đảm nhiệm nhiệm vụ kết nối mạng giữa các c
 
 - Kết nối container vào 1 network:
 
-      docker network connect `[network-name] [container-name]
+      docker network connect [network-name] [container-name]
 
     > Ví dụ: 
     >
