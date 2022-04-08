@@ -222,23 +222,92 @@ Tạo 1 image từ Dockerfile và PUSH lên Dockerhub:[^10]
       CMD ["nginx", "-g", "daemon off;"]
 
 - Đăng nhập vào Dockerhub
-- Tạo 1 Repository tên là vex2k1/ubuntu
+- Tạo 1 Repository tên là ubuntu
 - Build image:
     
-      docker build -t vex2k1/ubuntu:v1 .
+      docker build -t [username]/[repo-name]:[tag] .
+
+  > Ví dụ:
+  >
+  > `docker build -t vex2k1/ubuntu:v1 .`
 
 - Push image:
 
-      docker push vex2k1/ubuntu:v1
+      docker push [username]/[repo-name]:[tag]
+
+  > Ví dụ: 
+  > 
+  > `docker push vex2k1/ubuntu:v1`
 
 - Tạo container từ image vừa tạo:
 
-      docker run -it -p 999:80 vex2k1/ubuntu:v1 bash
+      docker run -it -p [host-port]:[container-port] [username]/[repo-name]:[tag] bash
 
+  > Ví dụ: 
+  >
+  > `docker run -it -p 9999:80 vex2k1/ubuntu:v1 bash`
 
+***
 
-    
-      
+## Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker-compose <a id="docker-compose"></a>
+
+## 1. Khái niệm [^11]
+
+Docker compose là công cụ dùng để định nghĩa và run multi-container cho Docker application. Với compose bạn sử dụng file YAML để config các services cho application của bạn
+
+## 2. Một số ví dụ cơ bản
+
+Sử dụng Docker compose để tự động hóa việc cài đặt WORDPRESS, MYSQL, PHPMYADMIN [^12][^13][^14]
+
+- Nội dụng file docker-compose.yaml:
+
+      version: "3.8"
+
+      services:
+        db:
+          image: mysql
+          container_name: db
+          restart: always
+          environment:
+            MYSQL_USER: vex
+            MYSQL_ROOT_PASSWORD: Vex@2306
+            MYSQL_PASSWORD: Vex@2306
+            MYSQL_DATABASE: vexdb
+          volumes:
+            - my-db:/var/lib/mysql
+          ports:
+            - "3306:3306"
+        
+        phpmyadmin:
+          image: phpmyadmin/phpmyadmin
+          container_name: phpmyadmin
+          ports:
+            - "8080:80"
+          environment:
+            MYSQL_ROOT_PASSWORD: Vex@2306 
+            PMA_HOST: db 
+            PMA_USER: root 
+            PMA_PASSWORD: Vex@2306 
+        
+        wordpress:
+          depends_on:
+            - db
+            - phpmyadmin
+          image: wordpress:latest
+          ports:
+            - "8000:80"
+          restart: always
+          volumes:
+            - wp-db:/var/www/html
+          environment:
+            WORDPRESS_DB_HOST: db:3306
+            WORDPRESS_DB_USER: vex
+            WORDPRESS_DB_PASSWORD: Vex@2306
+            WORDPRESS_DB_NAME: vexdb
+
+      volumes: 
+        my-db:
+        wp-db:
 
 
 
@@ -254,7 +323,10 @@ Tạo 1 image từ Dockerfile và PUSH lên Dockerhub:[^10]
 [^8]: https://www.youtube.com/watch?v=DSP2-ip38Zw&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=4
 [^9]: https://blog.cloud365.vn/container/tim-hieu-docker-phan-4/
 [^10]: https://gist.github.com/ProProgrammer/4399168ea3da59536ea025394c4d2fa4
-
+[^11]: https://viblo.asia/p/docker-compose-la-gi-kien-thuc-co-ban-ve-docker-compose-1VgZv8d75Aw
+[^12]: https://github.com/Jasoncheung94/youtube-projects-code/blob/main/phpmyadmin_docker/docker-compose.yml
+[^13]: https://www.hostinger.com/tutorials/run-docker-wordpress
+[^14]: https://github.com/kassambara/wordpress-docker-compose/blob/master/docker-compose.yml
 
 
 
