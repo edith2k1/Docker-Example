@@ -293,7 +293,8 @@ Sử dụng Docker compose để tự động hóa việc cài đặt WORDPRESS,
           depends_on:
             - db
             - phpmyadmin
-          image: wordpress:latest
+          image: wordpress
+          container_name: wordpress
           ports:
             - "8000:80"
           restart: always
