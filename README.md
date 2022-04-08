@@ -209,6 +209,8 @@ Dockerfile là một file kịch bản sử dụng để tạo mới một image
 
 ### 2. Một số ví dụ cơ bản
 
+Tạo 1 image từ Dockerfile và push lên Docker hub:
+
 ***
 
 [^1]: https://docs.docker.com/engine/install/ubuntu/
