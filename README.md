@@ -209,7 +209,7 @@ Dockerfile là một file kịch bản sử dụng để tạo mới một image
 
 ### 2. Một số ví dụ cơ bản
 
-Tạo 1 image từ Dockerfile và PUSH lên Dockerhub:
+Tạo 1 image từ Dockerfile và PUSH lên Dockerhub:[^10]
 
 - Nội dung Dockerfile:
 
@@ -253,6 +253,7 @@ Tạo 1 image từ Dockerfile và PUSH lên Dockerhub:
 [^7]: https://viblo.asia/p/docker-co-ban-p2-storage-gAm5yVo8Kdb
 [^8]: https://www.youtube.com/watch?v=DSP2-ip38Zw&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=4
 [^9]: https://blog.cloud365.vn/container/tim-hieu-docker-phan-4/
+[^10]: https://gist.github.com/ProProgrammer/4399168ea3da59536ea025394c4d2fa4
 
 
 
