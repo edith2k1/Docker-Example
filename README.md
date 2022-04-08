@@ -319,7 +319,7 @@ Sử dụng Docker compose để tự động hóa việc cài đặt WORDPRESS,
 
 <img width="960" alt="wordpress" src="https://user-images.githubusercontent.com/100410064/162448646-897f56dd-df25-4fa7-a215-a9b1add4af99.png">
 
-> > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > >***
+***
 
 <img width="960" alt="phpmyadmin" src="https://user-images.githubusercontent.com/100410064/162448770-39743a36-784c-44a0-a616-b189ff53b296.png">
 
