@@ -269,6 +269,8 @@ Sử dụng Docker compose để tự động hóa việc cài đặt WORDPRESS,
         db:
           image: mysql
           container_name: db
+          ports:
+            - "3306:3306"
           restart: always
           environment:
             MYSQL_USER: vex
@@ -277,8 +279,6 @@ Sử dụng Docker compose để tự động hóa việc cài đặt WORDPRESS,
             MYSQL_DATABASE: vexdb
           volumes:
             - my-db:/var/lib/mysql
-          ports:
-            - "3306:3306"
         
         phpmyadmin:
           image: phpmyadmin
@@ -300,13 +300,13 @@ Sử dụng Docker compose để tự động hóa việc cài đặt WORDPRESS,
           ports:
             - "8000:80"
           restart: always
-          volumes:
-            - wp-db:/var/www/html
           environment:
             WORDPRESS_DB_HOST: db:3306
             WORDPRESS_DB_USER: vex
             WORDPRESS_DB_PASSWORD: Vex@2306
             WORDPRESS_DB_NAME: vexdb
+          volumes:
+            - wp-db:/var/www/html
 
       volumes: 
         my-db:
@@ -319,7 +319,7 @@ Sử dụng Docker compose để tự động hóa việc cài đặt WORDPRESS,
 
 <img width="960" alt="wordpress" src="https://user-images.githubusercontent.com/100410064/162448646-897f56dd-df25-4fa7-a215-a9b1add4af99.png">
 
-> > > > > > > > > > > > > > > > > > > > > > > >***
+> > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > >***
 
 <img width="960" alt="phpmyadmin" src="https://user-images.githubusercontent.com/100410064/162448770-39743a36-784c-44a0-a616-b189ff53b296.png">
 
