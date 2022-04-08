@@ -279,7 +279,7 @@ Sử dụng Docker compose để tự động hóa việc cài đặt WORDPRESS,
             - "3306:3306"
         
         phpmyadmin:
-          image: phpmyadmin/phpmyadmin
+          image: phpmyadmin
           container_name: phpmyadmin
           ports:
             - "8080:80"
