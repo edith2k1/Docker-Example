@@ -209,7 +209,38 @@ Dockerfile là một file kịch bản sử dụng để tạo mới một image
 
 ### 2. Một số ví dụ cơ bản
 
-Tạo 1 image từ Dockerfile và push lên Docker hub:
+Tạo 1 image từ Dockerfile và PUSH lên Dockerhub:
+
+- Nội dung Dockerfile:
+
+      FROM ubuntu:latest
+
+      RUN apt-get update
+      RUN apt-get install nginx -y
+
+      # Restart nginx service when create a new container
+      CMD ["nginx", "-g", "daemon off;"]
+
+- Đăng nhập vào Dockerhub
+- Tạo 1 Repository tên là vex2k1/ubuntu
+- Build image:
+    
+      docker build -t vex2k1/ubuntu:v1 .
+
+- Push image:
+
+      docker push vex2k1/ubuntu:v1
+
+- Tạo container từ image vừa tạo:
+
+      docker run -it -p 999:80 vex2k1/ubuntu:v1 bash
+
+
+
+    
+      
+
+
 
 ***
 
