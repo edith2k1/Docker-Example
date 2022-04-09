@@ -319,7 +319,7 @@ Sử dụng Docker compose để tự động hóa việc cài đặt WORDPRESS,
 
 Portainer là công cụ dùng để quản lý các docker apps và thao tác chúng được thuận tiện hơn trên giao diện UI.
 
-### 2. Cách cài dặt Portainer[^15]
+### 2. Cách cài đặt Portainer[^15]
 
 - Chạy các lệnh sau:
 
