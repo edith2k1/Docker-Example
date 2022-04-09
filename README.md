@@ -4,8 +4,6 @@
 
 ## Nội dung
 
-- ### Lý thuyết
-
   - [Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:](#install-docker-ubuntu)
 
   - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians:](#docker-netwoking)
@@ -15,16 +13,6 @@
   - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Dockerfile](#Dockerfile)
 
   - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker-compose](#docker-compose)
-
-- ### Thực hành 
-
-  - [Cài đặt WORDPRESS từ images và tạo container từ images đã cài đặt (Từ Docker hub và Dockerfile)](#wordpress)
-
-  - [Cài đặt MYSQL từ images và tạo container từ images đã cài đặt (Từ Docker hub và Dockerfile)](#mysql)
-
-  - [Cài đặt PHPMYADMIN từ images và tạo container từ images đã cài đặt (Từ Docker hub và Dockerfile)](#phpmyadmin)
-
-  - [Sau khi đã hoàn tất 3 yêu cầu trên hãy tạo một Docker-compose để tự hóa việc cài đặt cho 3 dịch vụ trên](#usage-docker-compose)
 
   - [Cài đặt Portainer để quản lý Docker](#portainer)
 
@@ -325,6 +313,43 @@ Sử dụng Docker compose để tự động hóa việc cài đặt WORDPRESS,
 
 ***
 
+## Cài đặt Portainer để quản lý Docker <a id="portainer"></a>
+
+### 1. Khái niệm
+
+Portainer là công cụ dùng để quản lý các docker apps và thao tác chúng được thuận tiện hơn trên giao diện UI.
+
+### 2. Cách cài dặt Portainer[^15]
+
+- Chạy các lệnh sau:
+
+>     docker volume create portainer_data
+    
+  
+>     docker run -d -p 7000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+
+- Lên trình duyệt gõ `http://localhost:9000`
+
+<img width="958" alt="portainer" src="https://user-images.githubusercontent.com/100410064/162562973-79ecafc1-c8b7-48de-83bf-c5bf9981db29.png">
+
+- Màn hình quản lý Containers:
+
+<img width="960" alt="containers" src="https://user-images.githubusercontent.com/100410064/162563248-a57e2e1f-d6c3-4a13-95a0-46156a0fa043.png">
+
+- Màn hình quản lý Networks:
+
+<img width="960" alt="networks" src="https://user-images.githubusercontent.com/100410064/162563259-e5805d73-4f9b-4967-8690-4a4000667572.png">
+
+- Màn hình quản lý Images:
+
+<img width="960" alt="images" src="https://user-images.githubusercontent.com/100410064/162563255-e65a6888-6fac-4b32-be1d-6c37638d1a67.png">
+
+- Màn hình quản lý Volumes:
+
+<img width="960" alt="volumes" src="https://user-images.githubusercontent.com/100410064/162563264-0e2fecd1-bbde-4979-b49f-7fbbfaeba317.png">
+
+***
+
 [^1]: https://docs.docker.com/engine/install/ubuntu/
 [^2]: https://viblo.asia/p/docker-networking-nhung-khai-niem-va-cach-su-dung-co-ban-gGJ59P2JlX2
 [^3]: https://www.youtube.com/watch?v=k1SwXOxvMdE&list=PLwJr0JSP7i8At14UIC-JR4r73G4hQ1CXO&index=5
@@ -339,7 +364,7 @@ Sử dụng Docker compose để tự động hóa việc cài đặt WORDPRESS,
 [^12]: https://github.com/Jasoncheung94/youtube-projects-code/blob/main/phpmyadmin_docker/docker-compose.yml
 [^13]: https://www.hostinger.com/tutorials/run-docker-wordpress
 [^14]: https://github.com/kassambara/wordpress-docker-compose/blob/master/docker-compose.yml
-
+[^15]: https://www.portainer.io/blog/portainer-your-docker-gui-for-your-ubuntu-linux-desktop
 
 
 
