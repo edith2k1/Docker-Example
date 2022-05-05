@@ -251,7 +251,7 @@ Sử dụng Docker compose để tự động hóa việc cài đặt WORDPRESS,
 
 - Nội dụng file docker-compose.yaml:
 
-      version: "3.8"
+      version: "3.3"
 
       services:
         db:
