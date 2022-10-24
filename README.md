@@ -1,4 +1,4 @@
-# CONTAINER HÓA MÁY CHỦ WEB :triumph:
+# TÌM HIỂU VỀ DOCKER
 
 ![docker](https://user-images.githubusercontent.com/100410064/162448188-2aeb7f6d-76df-4b5a-a1df-0c0877f8fa1a.png)
 
