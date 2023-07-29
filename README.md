@@ -6,6 +6,8 @@
 
   - [Cài mysql và phpmyadmin bằng script](#extra)
 
+  - [Cài sql server 2022 bằng script](#extra2)
+
   - [Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:](#install-docker-ubuntu)
 
   - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians:](#docker-netwoking)
@@ -29,6 +31,10 @@
     docker pull phpmyadmin
 
     docker run --name phpmyadmin -e PMA_HOST=172.17.0.2 -e MYSQL_ROOT_PASSWORD=root -e PMA_USER=root -e PMA_PASSWORD=root -p 8080:80 -d phpmyadmin
+
+## Cài sql server 2022 bằng script <a id="extra2"></a>
+
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Hieu@2024" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
 
 ## Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:[^1] <a id="install-docker-ubuntu"></a>
 
