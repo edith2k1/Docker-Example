@@ -8,7 +8,7 @@
 
   - [Cài sql server 2022 bằng script](#extra2)
 
-  - [Cài sqlmongodb bằng script](#extra3)
+  - [Cài mongodb bằng script](#extra3)
 
   - [Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:](#install-docker-ubuntu)
 
