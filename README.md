@@ -46,7 +46,7 @@
 
     docker pull mongodb/mongodb-community-server:latest
 
-    docker run --name mongo -p 27017:27017 -d mongodb/mongodb-community-server:latest
+    docker run --name mongo -p 27017:27017 -v D:/databases/mongo:/data/db -d mongodb/mongodb-community-server:latest
 
 Để remote MSSQL bằng VSCode, chúng ta cần thêm extension: "MongoDB for VS Code"
 
