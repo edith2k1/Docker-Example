@@ -8,6 +8,8 @@
 
   - [Cài sql server 2022 bằng script](#extra2)
 
+  - [Cài sqlmongodb bằng script](#extra3)
+
   - [Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:](#install-docker-ubuntu)
 
   - [Tìm hiểu khái niệm và thực hiện 1 ví dụ về Docker networking :globe_with_meridians:](#docker-netwoking)
@@ -37,6 +39,16 @@
     docker pull mcr.microsoft.com/mssql/server:2022-latest
 
     docker run --name mssql -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Hieu@2024" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
+
+Để remote MSSQL bằng VSCode, chúng ta cần thêm extension: "mssql"
+
+## Cài mongodb bằng script <a id="extra3"></a>
+
+    docker pull mongodb/mongodb-community-server:latest
+
+    docker run --name mongo -p 27017:27017 -d mongodb/mongodb-community-server:latest
+
+Để remote MSSQL bằng VSCode, chúng ta cần thêm extension: "MongoDB for VS Code"
 
 ## Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:[^1] <a id="install-docker-ubuntu"></a>
 
