@@ -26,7 +26,7 @@
 
     docker pull mysql
 
-    docker run --name mysql-server -e MYSQL_ROOT_PASSWORD=root -p 33061:3306 -v D:/myprojects/nxbDev/nestJS/db:/var/lib/mysql -d mysql
+    docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 33061:3306 -v D:/myprojects/nxbDev/nestJS/db:/var/lib/mysql -d mysql
 
     docker pull phpmyadmin
 
@@ -34,7 +34,9 @@
 
 ## Cài sql server 2022 bằng script <a id="extra2"></a>
 
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Hieu@2024" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
+    docker pull mcr.microsoft.com/mssql/server:2022-latest
+
+    docker run --name mssql -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Hieu@2024" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
 
 ## Cài đặt Docker :whale: trên máy chủ Ubuntu :penguin:[^1] <a id="install-docker-ubuntu"></a>
 
